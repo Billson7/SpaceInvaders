@@ -13,6 +13,7 @@ public class SpaceCraft {
 	private int x;
 	private int y;
 	private Image player; 
+	private int key; 
 	private ArrayList<PlayerBullet> bullets = new ArrayList<>(); 
 	private final int SPACESHIP_LEFT = 15; 
 	private final int SPACESHIP_RIGHT = 35;
@@ -59,7 +60,7 @@ public class SpaceCraft {
 	
 	public void keyPressed(KeyEvent e) {
 
-	    int key = e.getKeyCode();
+	    key = e.getKeyCode();
 	    
 	    if (key == KeyEvent.VK_UP){
 	    	shoot();
@@ -85,7 +86,7 @@ public class SpaceCraft {
 	}
 	   
 	public void keyReleased(KeyEvent e) {
-	    int key = e.getKeyCode();
+	    key = e.getKeyCode();
 
 	    if (key == KeyEvent.VK_A) {
 	    	move_x = 0;
